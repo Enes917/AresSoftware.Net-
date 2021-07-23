@@ -18,4 +18,4 @@ exports.conf = {
 exports.help = {
  name: 'yavaşmod',
  usage: 'yavaşmod'
-};//Ruler`Grave#9102 tarafından yapılmıştır
+};//Ruler`Grave#9102 tarafından yapılmıştır.
