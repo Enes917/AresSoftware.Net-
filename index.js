@@ -107,37 +107,5 @@ client.on('warn', e => {
 
 client.on('error', e => {
     console.log(chalk.bgRed(e.replace(regToken, 'that was redacted')));
-});
-
-///////////////////////eklendim atıldım
-
-client.on('guildDelete', guild => {
-
-    let exembed = new Discord.MessageEmbed()
-    
-    .setColor("RED")
-    .setTitle(" ATILDIM !")
-    .addField("Sunucu Adı:", guild.name)
-    .addField("Sunucu sahibi", guild.owner)
-    .addField("Sunucudaki Kişi Sayısı:", guild.memberCount)
-    
-       client.channels.cache.get('atıldım log kanal id').send(exembed);
-      
-    });
-    
-    
-    client.on('guildCreate', guild => {
-    
-    let exembed = new Discord.MessageEmbed()
-    
-    .setColor("GREEN")
-    .setTitle("EKLENDİM !")
-    .addField("Sunucu Adı:", guild.name)
-    .addField("Sunucu sahibi", guild.owner)
-    .addField("Sunucudaki Kişi Sayısı:", guild.memberCount)
-    
-       client.channels.cache.get('eklendim log kanal id').send(exembed);
-      
-    });
-    
+})
 client.login(ayarlar.token);
